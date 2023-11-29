@@ -1,5 +1,64 @@
 # Node.JS CHEATSHEET
 
+
+
+NPM (Node Package Manager) Cheat Sheet:
+
+```bash
+npm install package-name #Install a package locally
+
+npm install -g package-name #Install a package globally
+
+npm install --save-dev package-name #Install a package as a development dependency
+
+npm install package-name@version #Install a specific package version
+
+npm show package-name #Show information about a package:
+
+npm ls #List locally installed packages
+
+npm ls -g --depth=0 #List globally installed packages
+
+npm update #Update all local packages:
+
+npm update package-name  #Update a specific local package:
+
+npm uninstall package-name #Uninstall a package:
+
+npm run script-name # Run a script defined in package.json:
+
+npm search keyword #Search for packages:
+```
+
+
+##### PNPM Cheat Sheet:
+
+```bash
+pnpm install package-name #Install a package locally
+
+pnpm install --save-dev package-name #Install a package as a development dependency
+
+pnpm install package-name@version #Install a specific package version
+
+pnpm show package-name #Show information about a package
+
+pnpm ls #List locally installed packages
+
+pnpm ls -g --depth=0 #List globally installed packages
+
+pnpm update #Update all local packages
+
+pnpm update package-name #Update a specific local package
+
+pnpm remove package-name #Uninstall a package
+
+pnpm run script-name #Run a script defined in package.json
+
+pnpm search keyword #Search for packages
+```
+These commands should help you get started with package management in Node.js using npm and pnpm. Don't forget to check the official documentation for more detailed information on each command.
+
+# NodeJS
 ## Qu'est ce que c'est ?
 
 Node.js est un environnement d’exécution single-thread, open-source et multi-plateforme permettant de créer des applications rapides et évolutives côté serveur et en réseau. Il fonctionne avec le moteur d’exécution JavaScript V8 et utilise une architecture d’E / S non bloquante et pilotée par les événements, ce qui le rend efficace et adapté aux applications en temps réel.
@@ -220,9 +279,9 @@ exemple
 - "4.0.0" :
 Cela spécifie une version exacte. Le projet utilisera uniquement la version 4.0.0 du paquet. Aucune mise à jour automatique ne sera effectuée, même si des versions ultérieures compatibles sont publiées.
 - "^4.0.0" (Caret Range) :
-Le symbole caret (^) permet les mises à jour compatibles avec la version spécifiée, mais bloque les mises à jour majeures qui ne sont pas rétrocompatibles avec la version spécifiée. 
+Le symbole 'caret'  permet les mises à jour compatibles avec la version spécifiée, mais bloque les mises à jour majeures qui ne sont pas rétrocompatibles avec la version spécifiée. 
 - "~4.0.0" (Tilde Range) :
-Le symbole tilde (~) permet les mises à jour de correctifs, mais bloque les mises à jour mineures et majeures. 
+Le symbole 'tilde'  permet les mises à jour de correctifs, mais bloque les mises à jour mineures et majeures. 
 
 #### npm et npx
 
@@ -231,63 +290,7 @@ npm est le gestionnaire de paquets intégré à un serveur Node.js. npm est donc
 
 npx est l'acronyme de Node Package eXecute. C'est un outil spécialement conçu pour l'exécution des paquets. Lorsque vous lancez l'exécution d'un paquet avec cet outil, npx va chercher dans la variable "PATH" de l'ordinateur puis dans les fichiers binaires des modules du projet pour lancer la commande. S'il ne l'a pas trouvé, l'outil est même capable d'aller sur internet chercher la commande et de l'exécuter ensuite.
 
-#### Cheat Sheet pour package manager
 
-NPM (Node Package Manager) Cheat Sheet:
-
-```bash
-npm install package-name #Install a package locally
-
-npm install -g package-name #Install a package globally
-
-npm install --save-dev package-name #Install a package as a development dependency
-
-npm install package-name@version #Install a specific package version
-
-npm show package-name #Show information about a package:
-
-npm ls #List locally installed packages
-
-npm ls -g --depth=0 #List globally installed packages
-
-npm update #Update all local packages:
-
-npm update package-name  #Update a specific local package:
-
-npm uninstall package-name #Uninstall a package:
-
-npm run script-name # Run a script defined in package.json:
-
-npm search keyword #Search for packages:
-```
-
-
-##### PNPM Cheat Sheet:
-
-```bash
-pnpm install package-name #Install a package locally
-
-pnpm install --save-dev package-name #Install a package as a development dependency
-
-pnpm install package-name@version #Install a specific package version
-
-pnpm show package-name #Show information about a package
-
-pnpm ls #List locally installed packages
-
-pnpm ls -g --depth=0 #List globally installed packages
-
-pnpm update #Update all local packages
-
-pnpm update package-name #Update a specific local package
-
-pnpm remove package-name #Uninstall a package
-
-pnpm run script-name #Run a script defined in package.json
-
-pnpm search keyword #Search for packages
-```
-These commands should help you get started with package management in Node.js using npm and pnpm. Don't forget to check the official documentation for more detailed information on each command.
 
 ## Code Tooling
 
@@ -303,11 +306,9 @@ Les linters et formatters sont des outils de "code tooling" (outils pour le dév
 par exemple ESLint est un linter populaire pour JavaScript.
 
 
-
  Les formatters sont des outils qui restructurent automatiquement le code pour qu'il respecte un style de formatage spécifique.
  Ils modifient la disposition du code en ajustant l'indentation, la position des parenthèses, etc., conformément aux règles de formatage prédéfinies.
 Par exemple, Prettier est un formatter utilisé dans plusieurs langages, y compris JavaScript et TypeScript.
-
 
 
 L'utilisation conjointe de linters et de formatters permet d'améliorer la cohérence du code, d'éviter les erreurs courantes, et de maintenir une base de code propre et facile à lire.
